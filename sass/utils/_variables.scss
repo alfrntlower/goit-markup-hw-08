@@ -1,0 +1,80 @@
+/*  
+Цвет основого текста #212121
+Цвет вторичного текста #757575
+акцент #2196F3
+белый #FFFFFF
+вторичный фон #F5F4FA
+*/
+
+$hero-bg-color: #2f303a;
+$header-border-color: #ececec;
+$white-color: #ffffff;
+$accent-color: #2196f3;
+$black-color: #000000;
+$main-bg-color: #e0e0e0;
+$card-border-color: #eeeeee;
+$secondary-bg-color: #f5f4fa;
+
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+
+$icon-color: #afb1b8;
+
+$form-submit-button: #188ce8;
+$invalid-color: #f44336;
+
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$time-transition: 250ms;
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  background-color: $white-color;
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/* Button*/
+button {
+  border: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 32px;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+img {
+  display: blok;
+  max-width: 100%;
+  height: auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}

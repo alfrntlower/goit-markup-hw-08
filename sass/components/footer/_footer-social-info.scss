@@ -1,0 +1,43 @@
+/* Footer Social Info */
+.footer-social {
+  padding-bottom: 40px;
+}
+
+.footer-social__title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+}
+
+.social-list {
+  display: flex;
+}
+.social-list__links:nth-child(n + 2) {
+  margin-left: 10px;
+}
+.social-list__links {
+  @include display_align-item(flex, center);
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color $time-transition $cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+@each $social-network in instagram, twitter, facebook, linkedin {
+  .social-list__icon-#{$social-network} {
+    @include icon_width_heidth_fill(20px, 20px, $white-color);
+  }
+}

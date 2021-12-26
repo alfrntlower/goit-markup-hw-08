@@ -1,0 +1,33 @@
+/* Filter on page */
+.filter-on-page__heading {
+  display: none;
+}
+
+.filter-buttons-list {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+.filter-buttons-list .filter-buttons-list__item + .filter-buttons-list__item {
+  margin-left: 8px;
+}
+
+.filter-buttons-list__button-portfolio {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: $primary-text-color;
+  background-color: $secondary-bg-color;
+
+  transition: color $time-transition $cubic,
+    background-color $time-transition $cubic, box-shadow $time-transition $cubic;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}

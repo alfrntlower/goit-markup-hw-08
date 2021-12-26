@@ -1,0 +1,11 @@
+/* Footer*/
+
+.page-footer {
+  background-color: $hero-bg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-container {
+  @include display_align-item(flex, baseline);
+  justify-content: space-between;
+}

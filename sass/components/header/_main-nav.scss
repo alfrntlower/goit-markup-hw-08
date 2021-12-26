@@ -1,0 +1,22 @@
+/* Main Navigation */
+.main-nav {
+  @include display_align-item(flex, center);
+  border-color: $white-color;
+}
+
+.main-nav__logo-link {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  color: $black-color;
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+.main-nav__logo-link--web {
+  color: $accent-color;
+}
+.main-nav__logo-link--studio {
+  color: $black-color;
+}

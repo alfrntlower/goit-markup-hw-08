@@ -1,0 +1,12 @@
+@mixin display_align-item($display, $align-item) {
+  display: $display;
+  align-items: $align-item;
+}
+//@include display_align-item(flex, center);
+
+@mixin icon_width_heidth_fill($width, $heidth, $fill) {
+  width: $width;
+  height: $heidth;
+  fill: $fill;
+}
+//@include icon_width_heidth_fill(10px, 10px, $black-color);

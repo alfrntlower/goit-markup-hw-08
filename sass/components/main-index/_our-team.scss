@@ -1,0 +1,98 @@
+/* Our Team */
+.our-team-section {
+  background-color: $secondary-bg-color;
+}
+
+.our-team__heading {
+  margin-top: 0px;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  color: $primary-text-color;
+}
+
+.our-team__list {
+  margin-top: 0px;
+  justify-content: center;
+
+  @include display_align-item(flex, center);
+}
+
+.our-team__list .our-team__item + .our-team__item {
+  margin-left: 30px;
+}
+
+.our-team__list .our-team__item {
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.our-team__scene {
+  overflow: hidden;
+}
+
+.our-team__photo {
+  transform: rotateX(0);
+  transition: transform $time-transition $cubic;
+}
+.our-team__list .our-team__item:hover .our-team__photo {
+  transform: translateY(20%) scale(1.5);
+}
+
+.our-team__full-name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  color: $primary-text-color;
+}
+.our-team__profession {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  color: $secondary-text-color;
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 30px;
+}
+
+.team-social-list__links:nth-child(n + 2) {
+  margin-left: 10px;
+}
+.team-social-list__links {
+  @include display_align-item(flex, center);
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color $time-transition $cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+@each $social-network in instagram, twitter, facebook, linkedin {
+  .team-social-list__icon-#{$social-network} {
+    @include icon_width_heidth_fill(20px, 20px, $icon-color);
+    transition: fill $time-transition $cubic;
+  }
+  .team-social-list__links:hover &,
+  .team-social-list__links:focus & {
+    fill: $white-color;
+  }
+}

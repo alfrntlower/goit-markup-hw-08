@@ -1,0 +1,45 @@
+/* Benefits */
+.benefits {
+  padding-bottom: 0px;
+}
+.benefits__list {
+  display: flex;
+  justify-content: space-between;
+}
+.benefits__heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.benefits__space {
+  @include display_align-item(flex, center);
+  justify-content: center;
+
+  margin-bottom: 30px;
+  height: 120px;
+
+  background-color: $secondary-bg-color;
+  border-radius: 4px;
+}
+.benefits__icon {
+  width: 70px;
+  height: 70px;
+}
+.benefits__tittle {
+  margin-bottom: 10px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.benefits__text {
+  width: 270px;
+  margin-top: 0px;
+
+  font-weight: 400;
+  line-height: 1.7;
+  color: $secondary-text-color;
+}

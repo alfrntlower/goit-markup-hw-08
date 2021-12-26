@@ -1,0 +1,40 @@
+/* Connection Navigation */
+.connection-nav {
+  @include display_align-item(flex, center);
+  margin-left: auto;
+}
+.connection-nav .connection-nav__item + .connection-nav__item {
+  margin-left: 50px;
+  align-items: center;
+}
+
+.connection-nav__contacts {
+  @include display_align-item(flex, center);
+
+  color: $secondary-text-color;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color $time-transition $cubic;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:hover .connection-nav__icon-envelope,
+  &:hover .connection-nav__icon-smartphone {
+    fill: $accent-color;
+  }
+}
+
+.connection-nav__icon-envelope,
+.connection-nav__icon-smartphone {
+  fill: $secondary-text-color;
+  margin-right: 10px;
+
+  transition: fill $time-transition $cubic;
+}
