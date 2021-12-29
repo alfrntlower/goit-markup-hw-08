@@ -26,6 +26,10 @@ $invalid-color: #f44336;
 $cubic: cubic-bezier(0.4, 0, 0.2, 1);
 $time-transition: 250ms;
 
+$mobile-width: 480px;
+$tablet-width: 768px;
+$pc-width: 1200px;
+
 body {
   font-family: "Roboto", sans-serif;
 
@@ -68,13 +72,36 @@ img {
   height: auto;
 }
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (max-width: $tablet-width - 1px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $pc-width) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    //max-width: 767px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $pc-width) {
+    width: 1200px;
+  }
 }

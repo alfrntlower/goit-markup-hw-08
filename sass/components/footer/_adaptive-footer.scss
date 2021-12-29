@@ -1,0 +1,293 @@
+/* Footer*/
+
+.page-footer {
+  background-color: $hero-bg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-container {
+  @media screen and (max-width: $tablet-width - 1px) {
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: $pc-width) {
+    display: flex;
+
+    justify-content: space-between;
+  }
+}
+
+/* Footer Main Info */
+.footer-main-info {
+  //width: 230px;
+}
+
+.footer-main-info__link {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: Raleway;
+  font-weight: 700;
+  color: $black-color;
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 1.2;
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $pc-width) {
+    display: block;
+  }
+}
+.footer-main-info__link--web {
+  color: $accent-color;
+}
+.footer-main-info__link--studio {
+  color: $white-color;
+}
+.footer-main-info__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $white-color;
+  @media screen and (max-width: $tablet-width - 1px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $pc-width) {
+    display: block;
+  }
+}
+.footer-main-info__contacts {
+  display: block;
+
+  color: $secondary-text-color;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color $time-transition $cubic;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+  }
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $pc-width) {
+    display: block;
+  }
+}
+.footer-main-info__item {
+  margin-bottom: 9px;
+}
+.footer-main-info__item:nth-last-child(-n + 1) {
+  margin-bottom: 0px;
+}
+
+/* Footer Social Info */
+.footer-social {
+  padding-bottom: 40px;
+}
+
+.footer-social__title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $pc-width) {
+    display: block;
+  }
+}
+
+.social-list {
+  @media screen and (max-width: $tablet-width - 1px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $pc-width) {
+  }
+}
+.social-list__links:nth-child(n + 2) {
+  margin-left: 10px;
+}
+.social-list__links {
+  @include display_align-item(flex, center);
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color $time-transition $cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+@each $social-network in instagram, twitter, facebook, linkedin {
+  .social-list__icon-#{$social-network} {
+    @include icon_width_heidth_fill(20px, 20px, $white-color);
+  }
+}
+
+/* Subscription Form */
+
+.footer-subscription__title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $pc-width) {
+    justify-content: start;
+    margin-top: 0px;
+  }
+}
+
+.subscription-form {
+  @media screen and (max-width: $tablet-width - 1px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.subscription-form input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.subscription-form__email {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 15px;
+  background-color: $hero-bg-color;
+
+  height: 50px;
+
+  &:hover {
+    border: 1px solid $accent-color;
+  }
+
+  &:invalid {
+    border-color: $invalid-color;
+  }
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    margin-bottom: 20px;
+    width: 450px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 358px;
+  }
+}
+
+.subscription-form__button {
+  display: flex;
+  align-items: center;
+
+  margin-left: 12px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: $white-color;
+  background-color: $accent-color;
+  text-align: center;
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.subscription-form__icon {
+  padding: 0;
+  fill: $white-color;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}

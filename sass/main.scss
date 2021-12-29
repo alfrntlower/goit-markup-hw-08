@@ -1,24 +1,30 @@
 @import "./utils/variables";
 @import "./utils/mixin";
 
-@import "./components/header/page-header";
-@import "./components/header/main-nav";
-@import "./components/header/site-nav";
-@import "./components/header/connection-nav";
+// @import "./components/header/page-header";
+// @import "./components/header/main-nav";
+// @import "./components/header/site-nav";
+// @import "./components/header/connection-nav";
 
-@import "./components/footer/page-footer";
-@import "./components/footer/footer-main-info";
-@import "./components/footer/footer-social-info";
-@import "./components/footer/subscription-form";
+@import "./components/header/adaptive-header";
 
-@import "./components/main-index/hero";
-@import "./components/main-index/benefits";
-@import "./components/main-index/what-we-do";
-@import "./components/main-index/our-team";
-@import "./components/main-index/regular-customers";
+// @import "./components/footer/page-footer";
+// @import "./components/footer/footer-main-info";
+// @import "./components/footer/footer-social-info";
+// @import "./components/footer/subscription-form";
 
-@import "./components/modal/modal";
-@import "./components/modal/main-form";
-@import "./components/modal/form-field";
-@import "./components/modal/checkbox";
-@import "./components/modal/main-form-submit-button";
+@import "./components/main-index/adaptive-main.scss";
+
+// @import "./components/main-index/hero";
+// @import "./components/main-index/benefits";
+// @import "./components/main-index/what-we-do";
+// @import "./components/main-index/our-team";
+// @import "./components/main-index/regular-customers";
+
+@import "./components/footer/adaptive-footer";
+
+// @import "./components/modal/modal";
+// @import "./components/modal/main-form";
+// @import "./components/modal/form-field";
+// @import "./components/modal/checkbox";
+// @import "./components/modal/main-form-submit-button";

@@ -90,9 +90,10 @@
   .team-social-list__icon-#{$social-network} {
     @include icon_width_heidth_fill(20px, 20px, $icon-color);
     transition: fill $time-transition $cubic;
-  }
-  .team-social-list__links:hover &,
-  .team-social-list__links:focus & {
-    fill: $white-color;
+
+    .team-social-list__links:hover &,
+    .team-social-list__links:focus & {
+      fill: $white-color;
+    }
   }
 }
