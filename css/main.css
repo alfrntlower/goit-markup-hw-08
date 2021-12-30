@@ -6,6 +6,18 @@
 белый #FFFFFF
 вторичный фон #F5F4FA
 */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
