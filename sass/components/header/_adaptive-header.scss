@@ -64,7 +64,9 @@
     padding-top: 48px;
     padding-left: 40px;
     padding-bottom: 48px;
-    height: 800px;
+    height: 700px;
+
+    outline: 1px solid red;
 
     &.is-open {
       display: block;
@@ -195,10 +197,10 @@
 /* Connection Navigation */
 .connection-nav {
   @media screen and (max-width: $tablet-width - 1px) {
-    margin-top: 306px;
+    margin-top: 200px;
     //display: inline-flex;
     //display: block;
-    flex-direction: column-reverse;
+    //flex-direction: column-reverse;
   }
   @media screen and (min-width: $tablet-width) {
     margin-left: 84px;
@@ -214,6 +216,21 @@
 .connection-nav__item {
   @media screen and (max-width: $tablet-width - 1px) {
     margin-bottom: 32px;
+
+    &:first-child {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.16;
+      letter-spacing: 0.02em;
+    }
+
+    &:last-child {
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.17;
+
+      letter-spacing: 0.02em;
+    }
   }
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 10px;
@@ -251,16 +268,16 @@
   }
 
   @media screen and(max-width: $tablet-width - 1px) {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 40px;
-    letter-spacing: 0.02em;
+    // font-style: normal;
+    // font-weight: 500;
+    // font-size: 34px;
+    // line-height: 1.17;
+    // letter-spacing: 0.02em;
   }
 
   @media screen and(min-width: $tablet-width) {
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    // line-height: 1.14;
+    // letter-spacing: 0.02em;
   }
 
   @media screen and(min-width: $pc-width) {
@@ -281,34 +298,38 @@
   }
 }
 
+// Mobile Social Links
 .connection-nav-mobile__social {
   @media screen and(max-width: $tablet-width - 1px) {
     margin-top: 64px;
     display: flex;
     align-items: center;
+    //flex-wrap: wrap;
   }
   @media screen and(min-width: $tablet-width) {
     display: none;
   }
 }
 
-.connection-nav-mobile__social
-  .connection-nav-mobile__item
-  + .connection-nav-mobile__item {
+.connection-nav-mobile__item:nth-child(-n + 3) {
   @media screen and(max-width: $tablet-width - 1px) {
-    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
 .connection-nav-mobile__link {
-  @media screen and(max-width: $tablet-width - 1px) {
-    text-decoration: none;
-    font-weight: 500;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  color: $accent-color;
+
+  @media screen and(max-width:$iphone-width) {
+    font-size: 14px;
+  }
+
+  @media screen and(min-width: $iphone-width + 1px) {
     font-size: 18px;
-    line-height: 1.2;
-
-    letter-spacing: 0.02em;
-
-    color: $accent-color;
   }
 }

@@ -33,6 +33,11 @@ body {
   margin: 0;
 }
 
+a {
+  padding: 0;
+  margin: 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -176,7 +181,8 @@ img {
     padding-top: 48px;
     padding-left: 40px;
     padding-bottom: 48px;
-    height: 800px;
+    height: 700px;
+    outline: 1px solid red;
   }
   .menu-container.is-open {
     display: block;
@@ -329,11 +335,7 @@ img {
 /* Connection Navigation */
 @media screen and (max-width: 767px) {
   .connection-nav {
-    margin-top: 306px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    margin-top: 200px;
   }
 }
 
@@ -358,6 +360,18 @@ img {
 @media screen and (max-width: 767px) {
   .connection-nav__item {
     margin-bottom: 32px;
+  }
+  .connection-nav__item:first-child {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+  }
+  .connection-nav__item:last-child {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -399,23 +413,6 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .connection-nav__contacts {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 40px;
-    letter-spacing: 0.02em;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .connection-nav__contacts {
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-  }
-}
-
-@media screen and (max-width: 767px) {
   .connection-nav__icon-envelope,
   .connection-nav__icon-smartphone {
     display: none;
@@ -451,21 +448,28 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .connection-nav-mobile__social
-.connection-nav-mobile__item
-+ .connection-nav-mobile__item {
-    margin-left: 20px;
+  .connection-nav-mobile__item:nth-child(-n + 3) {
+    margin-right: 20px;
   }
 }
 
-@media screen and (max-width: 767px) {
+.connection-nav-mobile__link {
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+@media screen and (max-width: 375px) {
   .connection-nav-mobile__link {
-    text-decoration: none;
-    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .connection-nav-mobile__link {
     font-size: 18px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2196f3;
   }
 }
 
