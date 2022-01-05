@@ -486,6 +486,95 @@
             </div>
         </footer>
 
+        <!-- Modal-->
+        <div class="backdrop is-hidden" data-modal>
+        
+            <div class="modal">
+                <button data-modal-close class="modal__close-button">
+                    <svg class="modal__close-icon">
+                        <use href="./images/form-sprite.svg#icon-close-button"></use>
+                    </svg>
+                </button>
+        
+                <!-- Main Form -->
+                <form action="" class="main-form form js-speaker-form">
+                    <h1 class="main-form__title">
+                        Оставьте свои данные, мы вам перезвоним
+                    </h1>
+                
+                    <!-- Form Field -->
+                    <label class="form-field">
+                        <span class="form-field__label">Имя</span>
+                        <input type="text" class="form-field__input" name="name" pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                            title="Данное поле должно содержать 2 слова" />
+                        <svg class="form-field_icon">
+                            <use href="./images/form-sprite.svg#icon-form-name"></use>
+                        </svg>
+                    </label>
+                
+                
+                    <label class="form-field">
+                        <span class="form-field__label">Телефон</span>
+                        <input type="tel" class="form-field__input" name="tel" pattern="[0-9]{10}"
+                            title="Необходимый формат 000-000-00-00" />
+                        <svg class="form-field_icon">
+                            <use href="./images/form-sprite.svg#icon-form-tel"></use>
+                        </svg>
+                    </label>
+                
+                    <label class="form-field">
+                        <span class="form-field__label">Почта</span>
+                        <input type="email" class="form-field__input" name="email" />
+                        <svg class="form-field_icon">
+                            <use href="./images/form-sprite.svg#icon-form-email"></use>
+                        </svg>
+                    </label>
+                
+                    <label class="form-field">
+                        <span class="form-field__label">Коментарий</span>
+                        <textarea class="form-field__comment" name="comment" id="comment" rows="8"
+                            placeholder="Введите текст"></textarea>
+                    </label>
+                
+                    <!-- Checkbox -->
+                    <label class="form-field-checkbox">
+                        <input class="form-field-checkbox__checkbox" type="checkbox" name="policy" value="agree" required>
+                        <span class="form-field-checkbox__icon"></span>
+                        <span class="form-field-checkbox__policy-label">Соглашаюсь с рассылкой и принимаю <a href=""
+                                class="form-field-checkbox__policy-terms">Условия договора</a></span>
+                    </label>
+                
+                    <!-- Main Form Submit Button -->
+                    <button type="submit" class="main-form__submit-button">Отправить</button>
+                
+                </form>
+        
+        
+                <!-- Script for check input-->
+                <!--
+                    <script>
+                        (() => {
+                            document
+                                .querySelector('.js-speaker-form')
+                                .addEventListener('submit', e => {
+                                    e.preventDefault();
+        
+                                    new FormData(e.currentTarget).forEach((value, name) =>
+                                        console.log(`${name}: ${value}`),
+                                    );
+        
+                                    e.currentTarget.reset();
+                                });
+                        })();
+                    </script>
+                        -->
+        
+            </div>
+        
+        
+        </div>
+
+
 
 
 
