@@ -198,9 +198,9 @@
 .connection-nav {
   @media screen and (max-width: $tablet-width - 1px) {
     margin-top: 200px;
-    //display: inline-flex;
-    //display: block;
-    //flex-direction: column-reverse;
+
+    display: flex;
+    flex-direction: column-reverse;
   }
   @media screen and (min-width: $tablet-width) {
     margin-left: 84px;
