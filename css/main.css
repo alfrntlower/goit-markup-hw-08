@@ -14,8 +14,8 @@ html {
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -139,7 +139,6 @@ img {
 
 .menu-button {
   position: absolute;
-  position: absolute;
   top: 10px;
   right: 15px;
   z-index: 1;
@@ -164,6 +163,7 @@ img {
 
 .menu-button.is-open .icon-cross {
   display: block;
+  outline: 1px solod red;
 }
 
 .menu-button.is-open .icon-menu {
@@ -173,15 +173,15 @@ img {
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: palegoldenrod;
     padding-top: 48px;
     padding-left: 40px;
     padding-bottom: 48px;
-    height: 700px;
+    height: 100vh;
     outline: 1px solid red;
   }
   .menu-container.is-open {
