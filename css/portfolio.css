@@ -163,7 +163,8 @@ img {
 
 .menu-button.is-open .icon-cross {
   display: block;
-  outline: 1px solod red;
+  position: fixed;
+  fill: #2196f3;
 }
 
 .menu-button.is-open .icon-menu {
@@ -186,6 +187,7 @@ img {
   }
   .menu-container.is-open {
     display: block;
+    overflow-y: scroll;
   }
 }
 

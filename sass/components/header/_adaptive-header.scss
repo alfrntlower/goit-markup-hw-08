@@ -1,6 +1,7 @@
 /* Header */
 .page-header {
   position: relative;
+
   //position: absolute;
 
   border-bottom: 1px solid $header-border-color;
@@ -46,7 +47,8 @@
 
 .menu-button.is-open .icon-cross {
   display: block;
-  outline: 1px solod red;
+  position: fixed;
+  fill: $accent-color;
 }
 
 .menu-button.is-open .icon-menu {
@@ -58,8 +60,10 @@
 
   @media screen and (max-width: $tablet-width - 1px) {
     display: none;
-    //position: absolute;
+
     position: fixed;
+
+    // overflow-y: scroll;
     top: 0;
     left: 0;
     width: 100vw;
@@ -74,6 +78,8 @@
 
     &.is-open {
       display: block;
+      // overflow: hidden;
+      overflow-y: scroll;
     }
   }
 
