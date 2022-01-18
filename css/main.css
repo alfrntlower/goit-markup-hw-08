@@ -141,7 +141,7 @@ img {
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 1;
+  z-index: 11;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -175,6 +175,7 @@ img {
   .menu-container {
     display: none;
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100vw;
@@ -186,8 +187,16 @@ img {
     outline: 1px solid red;
   }
   .menu-container.is-open {
-    display: block;
-    overflow-y: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -337,7 +346,6 @@ img {
 /* Connection Navigation */
 @media screen and (max-width: 767px) {
   .connection-nav {
-    margin-top: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -440,7 +448,6 @@ img {
 
 @media screen and (max-width: 767px) {
   .connection-nav-mobile__social {
-    margin-top: 64px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -639,6 +646,9 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: -30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -709,7 +719,6 @@ img {
 }
 
 .benefits__text {
-  width: 270px;
   margin-top: 0px;
   font-weight: 400;
   line-height: 1.7;
@@ -1290,10 +1299,6 @@ img {
 }
 
 /* Footer Social Info */
-.footer-social {
-  padding-bottom: 40px;
-}
-
 .footer-social__title {
   margin-bottom: 20px;
   font-size: 14px;
