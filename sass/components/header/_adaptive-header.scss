@@ -47,8 +47,13 @@
 
 .menu-button.is-open .icon-cross {
   display: block;
-  position: fixed;
+  //position: fixed;
   fill: $accent-color;
+}
+
+.is-open {
+  display: block;
+  position: fixed;
 }
 
 .menu-button.is-open .icon-menu {

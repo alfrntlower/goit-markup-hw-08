@@ -163,8 +163,12 @@ img {
 
 .menu-button.is-open .icon-cross {
   display: block;
-  position: fixed;
   fill: #2196f3;
+}
+
+.is-open {
+  display: block;
+  position: fixed;
 }
 
 .menu-button.is-open .icon-menu {
